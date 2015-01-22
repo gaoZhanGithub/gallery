@@ -1,0 +1,117 @@
+.jp-pagination {
+    text-align: left;
+}
+
+.jp-pagination, .jp-pagination input {
+    color: gray;
+    zoom: 1;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.jp-pagination:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.jp-previous, .jp-next, .jp-goto {
+    background-color: #F9F9F9;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FEFEFE), to(#F4F4F4));
+    background: -moz-linear-gradient(top, #FEFEFE, #F4F4F4);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FEFEFE', endColorstr='#F4F4F4');
+    background: -o-linear-gradient(top, #FEFEFE, #F4F4F4);
+    background: linear-gradient(top, #FEFEFE, #F4F4F4);
+    padding: 0 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px #fff inset;
+    cursor: pointer;
+}
+
+.jp-pagination a, .jp-disabled {
+    text-decoration: none;
+    color: gray;
+    margin: 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 22px;
+    line-height: 22px;
+}
+
+.jp-pagination .jp-previous {
+    margin: 0 3px 0 0;
+}
+
+.jp-pagination .jp-item {
+    background-color: #f3f3f3;
+    font-weight: 700;
+    padding: 0 8px;
+    border: 0;
+}
+
+.jp-pagination .jp-current, .jp-pagination .jp-item:hover {
+    color: #fff;
+    background: #ff9c00;
+}
+
+.jp-pagination .jp-break {
+    margin: 0 5px;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.jp-info {
+    line-height: 24px;
+    margin: 0 15px 0 10px;
+    height: 24px;
+}
+
+.jp-bold {
+    font-weight: 700;
+    padding: 0 5px;
+}
+
+.jp-which {
+    display: inline-block;
+    *display: inline;
+}
+
+.jp-which input {
+    height: 20px;
+    line-height: 20px;
+    padding: 0 6px;
+    width: 28px;
+    border: 1px solid;
+    border-color: #aaa #d1d1d1 #d1d1d1 #aaa;
+    margin-right: 5px;
+}
+
+.jp-invisible {
+    visibility: hidden !important;
+}
+
+.jp-pagination .jp-hidden {
+    display: none;
+}
+
+.jp-pagination .jp-previous:hover, .jp-pagination .jp-next:hover, .jp-pagination .jp-goto:hover, .jp-pagination input:hover {
+    border-color: #999;
+    color: #666;
+}
+
+.jp-pagination .jp-disabled, .jp-pagination .jp-disabled:hover {
+    color: #fff;
+    box-shadow: none;
+    background: #d4d4d4;
+    border-color: #d4d4d4;
+    filter: none;
+    color: #fff;
+}
+
+.jp-hidden {
+    display: none;
+}

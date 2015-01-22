@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>分页</title>
+    <style>
+        @font-face {
+            font-family: "rei";
+            src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20140606"); /* IE9 */
+            src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20140606#iefix") format("embedded-opentype"), /* IE6-IE8 */
+            url("https://i.alipayobjects.com/common/fonts/rei.woff?20140606") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+            url("https://i.alipayobjects.com/common/fonts/rei.ttf?20140606")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+            url("https://i.alipayobjects.com/common/fonts/rei.svg?20140606#rei") format("svg"); /* iOS 4.1- */
+        }
+        .iconfont {
+            font-family:"rei";
+            font-style: normal;
+            font-weight: normal;
+            cursor: default;
+            -webkit-font-smoothing: antialiased;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="pagination.css">
+</head>
+<body>
+<div>demo2</div>
+<div class="jp-pagination J_demo1"></div>
+<ul id="itemContainer1">
+    <li>01</li>
+    <li>02</li>
+    <li>03</li>
+    <li>04</li>
+    <li>05</li>
+    <li>06</li>
+    <li>07</li>
+    <li>08</li>
+    <li>09</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+    <li>16</li>
+    <li>17</li>
+    <li>18</li>
+    <li>19</li>
+    <li>20</li>
+    <li>21</li>
+</ul>
+<div>demo2</div>
+<div class="jp-pagination" id="J_demo2"></div>
+<div id="itemContainer2" style="padding:20px 15px;background-color:#f0f0f0;"></div>
+
+<div>demo3</div>
+<div class="jp-pagination" id="J_demo3"></div>
+
+<script type="text/javascript" src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+<script type="text/javascript" src="pagination.js"></script>
+<script>
+    (function($){
+        $.pagination({
+            holder:".J_demo1",
+            container:"itemContainer1",
+            perPage:3
+        });
+        $.pagination({
+            holder:"#J_demo2",
+            numPages:9,
+            midRange:8,
+            callback:function(pages, items){
+                $("#itemContainer2").html("请求第"+pages.current+"页数据");
+            }
+        });
+        $.pagination({
+            holder:"#J_demo3",
+            numPages:9,
+            midRange:8,
+            callback:function(pages, items){
+                window.location.hash="page="+pages.current;
+            }
+        });
+    })(jQuery);
+</script>
+</body>
+</html>
