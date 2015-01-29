@@ -10,7 +10,7 @@
         midRange: 5,//展示多少个页面
         miniPage:false,
         callback: undefined,
-        flush:false
+        flush:true
     }
     function Pagination (options){
         this.options = $.extend({}, defaults, options);
